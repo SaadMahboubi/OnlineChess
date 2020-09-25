@@ -1,0 +1,115 @@
+.echiquier {
+    float: center;
+    border:brown 10px solid;border-collapse: collapse;
+    
+}
+
+/* Mise en forme des noms de ligne/colonne */
+.echiquier th{
+    padding:5px;
+}
+
+/* Style des cases de l'echiquier */
+.echiquier td{
+    float: center;
+    /*Dimensionnement relatif au navigateur*/
+    width:8vmin;
+    height:8vmin;
+    min-height:30px;
+    min-width:30px;
+    font-size: 6vmin;
+    background:chocolate; /*couleur par défaut*/
+    color:black;
+    text-align: center;
+    border : solid 1px grey;
+}
+
+
+/* Gestion des cases blanches */
+.echiquier tr:nth-child(odd) td:nth-child(even), .echiquier tr:nth-child(even) td:nth-child(odd) {
+    background: bisque;
+}
+
+/* Gestion des images dans les cases de l'échiquier (option) */
+.echiquier td img{
+    
+    max-width:90%;
+    max-height:90%;
+}
+
+.titre {
+    float: center;
+    margin: 15px;
+    margin-right: 50px;
+    font-size: 25px;
+    color: brown;
+    font-weight: bold;
+
+}
+
+#contenu {
+    float: left;
+    margin-left: 10px;
+    width:90%;
+    height: 30vmax;
+    border-radius: 7px;
+    border:brown 7px solid;border-collapse: collapse;
+
+}
+#global
+{
+    width: 100%;
+}
+ 
+#cadre1
+{
+    height: 100%;
+    width: 49%;
+    float: left;
+    border-radius: 7px;
+    border: solid black 0px;
+}
+ 
+#cadre2
+{
+    height: 100%;
+    width: 49%;
+    float: right;
+    border-radius: 7px;
+    border: solid black 0px;
+}
+
+button {
+    float : right;
+    margin: 20px;
+    margin-top: 2px;
+    margin-right: 10%;
+    background: bisque;
+    color: black;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+     
+}
+button:hover {
+	background-color:rgb(253, 183, 103); /* change la couleur du bouton quand on le survole */
+}
+
+body {
+    background-color:rgb(255, 255, 255);
+    /*background-image:url(https://www.starwax.fr/medias/marbre.jpg);*/
+    }
+
+/* PARTIE TCHAT */
+#contenu {
+    text-align: left;
+}
+
+#contenu .pseudo {
+    margin-left: 10px;
+    font-family: Trebuchet MS ;
+    font-weight: bold;
+    margin-right: 30px;
+    color: brown;
+}

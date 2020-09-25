@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <META HTTP-EQUIV="refresh" CONTENT="5">
+    <title>Online Chess</title>
+    <!-- Chargement des styles -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Chargement des scripts -->
+    <script src="status.js"></script><!-- import de la partie actuelle -->
+    <script src="messages.js"></script><!-- import des messages du tchat -->
+    <script src="script.js"></script><!-- affichage et gestion de l'échiquier -->
+  </head>
+
+  <body onload="init()">
+  
+    
+      <center>
+        
+        <h1>Online Chess</h1>
+        
+          <!--CADRE PRINCIPAL-->
+          <div id="global">
+
+            <!--PREMIER CADRE-->
+            <div id="cadre1">
+
+        <!-- L'échiquier est un tableau de 8 lignes x 8 colonnes -->
+        <table class="echiquier">
+        <tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th></tr>
+            <tr><th>1</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>1</th></tr> 
+            <tr><th>2</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>2</th></tr>
+            <tr><th>3</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>3</th></tr>
+            <tr><th>4</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>4</th></tr>
+            <tr><th>5</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>5</th></tr>
+            <tr><th>6</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>6</th></tr>
+            <tr><th>7</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>7</th></tr>
+            <tr><th>8</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><th>8</th></tr>
+            <tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th></tr> 
+        </table><br/>
+        <!-- Formulaire de saisie et emission du coup à jouer
+             Envoie une requêtes sur '/ (POST)' au serveur -->
+        <form method="POST">
+            <input type="text" name="coup" placeholder="Coup à jouer (ex:P2A4)" autofocus></input>
+            <input type="submit" value="Envoyer"></input> 
+        </form>
+      </div>
+
+      <!--SECOND CADRE-->
+      <div id="cadre2">
+
+      <p class="titre">Tchat</p>
+      <div id="contenu">
+
+        </div>
+        
+          <!--<textarea placeholder="Saisissez votre message" id="message"> </textarea>-->
+          
+          <form method="POST" action="/tchat">
+              <input type="text" name="pseudo" placeholder="Pseudo"></input>
+              <input type="text" name="message" placeholder="Saisissez votre message"></input>
+              <button type="submit" value="Envoyer">Envoyer le message</button>
+              
+            </form>
+      </div>
+
+          </div>
+    </center>
+      
+      
+   
+  </body>
+</html>
